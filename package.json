@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "build": "node build/index.js",
+    "build": "rm -rf build",
     "start": "node build/index.js"
   },
   "keywords": [],
