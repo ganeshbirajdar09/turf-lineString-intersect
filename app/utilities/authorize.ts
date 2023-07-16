@@ -4,6 +4,7 @@ import { publicKeyGenerator } from "./keys.generate";
 import { Payload } from "../features-modules/auth/auth.types";
 
 
+//middleware to check for the token
 export const authorize = (excludedPaths: ExcludedPaths) => {
     return (req: Request, res: Response, next: NextFunction) => {
         try {
@@ -28,6 +29,7 @@ export const authorize = (excludedPaths: ExcludedPaths) => {
     }
 }
 
+//middleware to check the role of the user
 export const permit = (roles: string[]) => {
     return (req: Request, res: Response, next: NextFunction) => {
         const { user } = res.locals;
